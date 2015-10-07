@@ -1,0 +1,23 @@
+
+    <div class='wrapper wrapperPadding clearfix'>
+    	<div class='col-1 homeContent about'>
+	    	<h2>About</h2><hr>
+	    	<p>Junior Web Developer with 2 years experience freelancing. Most experience has been behind the scenes as a devops. Expertise in responsive design and coding minimalistic websites. Able to complete projects efficiently and satisfy customers with attractive, user-friendly websites. </p>
+	    	<p>Always looking to grow as a developer and learn. Strong player if there are any in-house video game or poker tournaments. Chosen as Time Person of the year in 2006. Willing and passionate about relocating.</p>
+    	</div>
+    	<div class='col-2 homeContent'>
+	    	<h2>Blog</h2>
+	    	<hr>
+	    	<% @posts.each do |post| %>
+		    	<h3><a href=""><%= link_to post.title,post %></a></h3>
+				<p class='date'><%= post.created_at.strftime("%A, %b %d") %></p>
+	    	<% end %>
+    	</div>
+    	<div class='col-3 homeContent'>
+	    	<h2>Projects</h2><hr>
+				<% @projects.each do |project| %>
+                <h3><a href=""><%= link_to project.title,project %></a></h3>
+                <p class='date'><%= project.created_at.strftime("%A, %b %d") %></p>
+            <% end %>
+    	</div>
+    </div>
